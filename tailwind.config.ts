@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        white:"var(--white)",
+        input:"var(--input)",
+        element:"var(--element)",
+        text:"var(--text)",
       },
     },
   },
