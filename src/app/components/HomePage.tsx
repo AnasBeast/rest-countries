@@ -31,8 +31,8 @@ const HomePage = () => {
                     country.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
                     country.region.toLowerCase().includes(filter.toLowerCase())
                 );
+                searchQuery!==""?setLimit(1):null;
                 setCountries(filteredCountries);
-                setDisplayedCountries(filteredCountries.slice((limit - 1) * 12, limit * 12));
             });
         };
         fetchCountries();
@@ -49,8 +49,8 @@ const HomePage = () => {
             <SearchBar />
             <Countries countries={displayedCountries} />
             <div className={`flex justify-between py-8 ${theme === 'dark'?"text-white":"text-gray-800"}`}>
-                <button onClick={() => limit==1?null:setLimit(limit-1)} className={`${theme==='dark'?"bg-element":"bg-white"} shadow-md p-4 rounded-md`}>Previous</button>
-                <button onClick={() => limit==countries.length?null:setLimit(limit+1)} className={`${theme==='dark'?"bg-element":"bg-white"} shadow-md p-4 rounded-md`}>Next</button>
+                <button onClick={() => limit==1?null:setLimit(limit-1)} className={`${theme==='dark'?"bg-element":"bg-white"} shadow-md p-4 rounded-md`}>Previous ({limit-1})</button>
+                <button onClick={() => limit==Math.round(countries.length/12)?null:setLimit(limit+1)} className={`${theme==='dark'?"bg-element":"bg-white"} shadow-md p-4 rounded-md`}>Next ({limit})</button>
             </div>
         </div>
     )
