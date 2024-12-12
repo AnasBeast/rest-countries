@@ -15,6 +15,7 @@ export default {
         input:"var(--input)",
         element:"var(--element)",
         text:"var(--text)",
+        lightback:"var(--lightback)",
       },
     },
   },
