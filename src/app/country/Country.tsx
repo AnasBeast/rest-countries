@@ -59,7 +59,7 @@ const CountryInfos = ({ countryName }: CountryProps) => {
     <div className="space-y-8">
       <button
         onClick={() => router.push("/")}
-        className={`${theme === "dark"?"dark:text-white bg-element":"bg-white text-gray-800"} flex gap-2 p-4 rounded-md`}
+        className={`${theme === "dark"?"dark:text-white bg-element":"bg-white text-gray-800"} flex gap-2 px-4 py-2 rounded-md`}
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
@@ -67,17 +67,17 @@ const CountryInfos = ({ countryName }: CountryProps) => {
 
         Back
       </button>
-      <div className={`grid grid-cols-2 items-center ${theme==="dark"?"text-white":"text-gray-800"}`}>
+      <div className={`sm:grid sm:grid-cols-2 flex flex-col items-center ${theme==="dark"?"text-white":"text-gray-800"}`}>
         <img
           src={country.flag}
           alt={`${country.name} flag`}
-          className="w-10/12 h-full object-cover shadow-md justify-self-center"
+          className="sm:w-10/12 w-full h-full object-cover shadow-md justify-self-center"
         />
-        <div className="p-8 space-y-12">
+        <div className="sm:p-8 py-8 space-y-12 w-full">
           <div>
             <h1 className="font-bold text-3xl">{country.name}</h1>
           </div>
-          <div className="grid grid-cols-2">
+          <div className="grid sm:grid-cols-2">
             <div className="space-y-3">
                 <p>
                     <span className="font-semibold">Native Name: </span>{country.nativeName}
@@ -109,7 +109,7 @@ const CountryInfos = ({ countryName }: CountryProps) => {
             </div>
           </div>
           <div>
-                <h1 className="font-semibold text-2xl">Border Countries:</h1>
+                <h1 className="font-semibold sm:text-2xl text-lg mb-4">Border Countries:</h1>
                 {country.borders ? (
                     <div key={"borders"} className="flex flex-wrap gap-6">
                     { country.borders ?

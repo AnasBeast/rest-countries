@@ -19,7 +19,7 @@ const CountryPage: React.FC = () => {
   const {theme} = useTheme();
   
   return (
-    <div className={`w-full h-screen overflow-y-hidden ${theme==='dark'?"bg-background":"bg-lightback"}`}>
+    <div className={`w-full sm:h-screen overflow-y-hidden ${theme==='dark'?"bg-background":"bg-lightback"}`}>
       <div className={`w-10/12 mx-auto py-10 `}>
       <CountryInfos countryName={countryName} />
       </div>
