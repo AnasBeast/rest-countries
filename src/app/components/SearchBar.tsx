@@ -22,7 +22,7 @@ export const SearchBar = () => {
 
     return (
         <div className="flex sm:flex-row gap-4 flex-col justify-between py-10">
-            <div className={`flex ${theme === 'dark' ? 'dark:bg-element' : 'bg-white'} shadow-md p-4 gap-4 rounded-md`}>
+            <div className={`flex ${theme === 'dark' ? 'dark:bg-element' : "bg-white"} shadow-md p-4 gap-4 rounded-md`}>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -47,7 +47,7 @@ export const SearchBar = () => {
             </div>
             <div>
                 <select value={filter} onChange={handleFilterChange} name="" id="" 
-                    className={`${theme === 'dark'?"bg-element dark:text-white":"bg-white text-gray-800 "} font-semibold 
+                    className={`${theme === 'dark'?"bg-element dark:text-white":"bg-white text-gray-800 bg-[url('https://icons.iconarchive.com/icons/pictogrammers/material/256/chevron-down-icon.png')] bg-contain"} font-semibold 
                     sm:w-52 rounded-md shadow-md hover:shadow-lg cursor-pointer gap-4 p-4 outline-none border-none`}>
                     <option disabled selected={true}>Filter By Region</option>
                     <option value="">WordlWide</option>

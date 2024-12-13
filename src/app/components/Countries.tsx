@@ -24,7 +24,7 @@ const Countries = ({ countries }: Props) => {
             {countries.length==0?
                 <div className='text-3xl w-full text-center'>No countries found</div>
                 :
-                <div className='grid grid-cols-4 gap-12'>
+                <div className='sm:grid sm:grid-cols-4 flex flex-col gap-12'>
                 {countries.map((country: Country) => (
                     <div 
                         key={country.name}
